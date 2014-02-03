@@ -1,0 +1,25 @@
+#include <iostream> // cout, cin
+#include <string> // string
+#include "name.h"
+using namespace std;
+
+// ============
+// Huvudprogram
+// ============
+int main()
+{
+    // Skapa objektet person1
+    Name person1;
+
+    // Sätt värden på person1
+    person1.setFirstName("Arne");
+    person1.setLastName("Andersson");
+
+    // Hämta och skriv ut värdena för person1
+    cout << person1.getFirstName() << " " << person1.getLastName() << endl;
+
+    // Skapa objektet person2
+    Name person2
+
+    return 0;
+}

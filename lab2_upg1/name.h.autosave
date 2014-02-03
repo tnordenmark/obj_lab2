@@ -1,0 +1,27 @@
+#ifndef NAME_H
+#define NAME_H
+#include <string>
+using std::string;
+
+class Name
+{
+    private:
+        // Medlemsattribut
+        string firstName;
+        string lastName;
+
+    public:
+        // Konstruktorer
+        Name(); // Standardkonstruktor
+        Name(string fn, string ln); // Överlagrad konstruktor
+
+        // Setters
+        void setFirstName(string fn);
+        void setLastName(string ln);
+
+        // Getters
+        string getFirstName() const;
+        string getLastName() const;
+};
+
+#endif // NAME_H
