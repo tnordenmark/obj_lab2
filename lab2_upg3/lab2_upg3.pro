@@ -9,8 +9,8 @@ SOURCES += main.cpp \
     address.cpp \
     name.cpp
 
-QMAKE_CXXFLAGS = -std=c++11
-QMAKE_LFLAGS = -std=c++11
+QMAKE_CXXFLAGS = -std=c++11 -W -Wall -Wextra -pedantic -ansi
+QMAKE_LFLAGS = -std=c++11 -W -Wall -Wextra -pedantic -ansi
 
 HEADERS += \
     person.h \

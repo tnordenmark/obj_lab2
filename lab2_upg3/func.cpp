@@ -1,5 +1,6 @@
 #include <iostream> // cout, cin
 #include <limits> // numeric_limits
+#include <sstream>
 #include "func.h"
 using namespace std;
 
@@ -74,41 +75,48 @@ void addPerson(vector<Person> &v)
     Address a;
 
     // Variabler för inmatad data
-    string fname, lname, street, postalno, city, persnr;
-    int skonr = 0;
+    string fname, lname, street, postalno, city, persnr, skonrstr;
+
+    // Läs bort huvudmenyns newline
+    cin.get();
 
     // Fråga efter, mata in och tilldela data till rätt objekts attribut
     cout << "Förnamn: ";
-    cin >> fname;
+    getline(cin, fname);
     n.setFirstName(fname);
 
     cout << "Efternamn: ";
-    cin >> lname;
+    getline(cin, lname);
     n.setLastName(lname);
 
-    // Läs bort skit i tuben
-    cin.get();
     cout << "Gatuadress: ";
     getline(cin, street);
     a.setStreet(street);
 
     cout << "Postnr: ";
-    cin >> postalno;
+    getline(cin, postalno);
     a.setPostalNo(postalno);
 
     cout << "Stad: ";
-    cin >> city;
+    getline(cin, city);
     a.setCity(city);
 
+    // Sätt Person-objektets "vanliga" variabler persNr och skoNr till rätt inmatad data
     cout << "Personnr: ";
-    cin >> persnr;
+    getline(cin, persnr);
     p.setPersNr(persnr);
 
+    // Eftersom det är lite vanskligt att blanda cin >> och getline använder jag
+    // getline till en temporär skonrsträng och omvandlar sen till int innan den
+    // sparas i Person-objektet
     cout << "Skonr: ";
-    cin >> skonr;
+    getline(cin, skonrstr);
+    int skonr = 0;
+    stringstream skostream(skonrstr);
+    skostream >> skonr;
     p.setSkoNr(skonr);
 
-    // Sätt Person-objektets "vanliga" variabler till rätt inmatad data
+    // Tilldela objekten Name och Address i klassen Person sina objekt
     p.setName(n);
     p.setAddress(a);
 

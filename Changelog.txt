@@ -1,1 +1,8 @@
-Uppdaterad för att inkludera testprogram för uppgift 1 och 2.
+Uppdaterad för att läsa in samtliga rader med getline().
+Angående for-loopen så kan jag inte hitta något slarvfel i min
+version av koden. Det är möjligt att jag åtgärdat det efter
+inlämning och glömt att uppdatera.
+
+Man får för övrigt ingen notifiering om att feedbacken på en uppgift
+är uppdaterad för eventuell komplettering. Varför det ibland kan dröja
+innan man upptäcker att så är fallet.
